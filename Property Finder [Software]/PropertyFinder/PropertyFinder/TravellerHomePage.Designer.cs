@@ -55,7 +55,7 @@
             // 
             this.Properties_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Properties_datagrid.Location = new System.Drawing.Point(17, 167);
-            this.Properties_datagrid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Properties_datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Properties_datagrid.Name = "Properties_datagrid";
             this.Properties_datagrid.RowHeadersWidth = 51;
             this.Properties_datagrid.RowTemplate.Height = 24;
@@ -70,13 +70,14 @@
             this.search_btn.TabIndex = 1;
             this.search_btn.Text = "Search";
             this.search_btn.UseVisualStyleBackColor = true;
+            this.search_btn.Click += new System.EventHandler(this.search_btn_Click);
             // 
             // Rent_chkBox
             // 
             this.Rent_chkBox.AutoSize = true;
             this.Rent_chkBox.Location = new System.Drawing.Point(17, 90);
             this.Rent_chkBox.Name = "Rent_chkBox";
-            this.Rent_chkBox.Size = new System.Drawing.Size(74, 29);
+            this.Rent_chkBox.Size = new System.Drawing.Size(89, 33);
             this.Rent_chkBox.TabIndex = 2;
             this.Rent_chkBox.Text = "Rent";
             this.Rent_chkBox.UseVisualStyleBackColor = true;
@@ -86,7 +87,7 @@
             this.buy_chkBox.AutoSize = true;
             this.buy_chkBox.Location = new System.Drawing.Point(97, 90);
             this.buy_chkBox.Name = "buy_chkBox";
-            this.buy_chkBox.Size = new System.Drawing.Size(68, 29);
+            this.buy_chkBox.Size = new System.Drawing.Size(79, 33);
             this.buy_chkBox.TabIndex = 2;
             this.buy_chkBox.Text = "Buy";
             this.buy_chkBox.UseVisualStyleBackColor = true;
@@ -96,7 +97,7 @@
             this.Villa_btn.AutoSize = true;
             this.Villa_btn.Location = new System.Drawing.Point(588, 83);
             this.Villa_btn.Name = "Villa_btn";
-            this.Villa_btn.Size = new System.Drawing.Size(70, 29);
+            this.Villa_btn.Size = new System.Drawing.Size(84, 33);
             this.Villa_btn.TabIndex = 3;
             this.Villa_btn.TabStop = true;
             this.Villa_btn.Text = "Villa";
@@ -107,7 +108,7 @@
             this.Appartement_btn.AutoSize = true;
             this.Appartement_btn.Location = new System.Drawing.Point(673, 83);
             this.Appartement_btn.Name = "Appartement_btn";
-            this.Appartement_btn.Size = new System.Drawing.Size(145, 29);
+            this.Appartement_btn.Size = new System.Drawing.Size(175, 33);
             this.Appartement_btn.TabIndex = 3;
             this.Appartement_btn.TabStop = true;
             this.Appartement_btn.Text = "Appartement";
@@ -118,7 +119,7 @@
             this.land_btn.AutoSize = true;
             this.land_btn.Location = new System.Drawing.Point(588, 120);
             this.land_btn.Name = "land_btn";
-            this.land_btn.Size = new System.Drawing.Size(77, 29);
+            this.land_btn.Size = new System.Drawing.Size(91, 33);
             this.land_btn.TabIndex = 3;
             this.land_btn.TabStop = true;
             this.land_btn.Text = "Land";
@@ -129,7 +130,7 @@
             this.House_btn.AutoSize = true;
             this.House_btn.Location = new System.Drawing.Point(673, 118);
             this.House_btn.Name = "House_btn";
-            this.House_btn.Size = new System.Drawing.Size(90, 29);
+            this.House_btn.Size = new System.Drawing.Size(108, 33);
             this.House_btn.TabIndex = 3;
             this.House_btn.TabStop = true;
             this.House_btn.Text = "House";
@@ -140,7 +141,7 @@
             this.rooms_cmboBox.FormattingEnabled = true;
             this.rooms_cmboBox.Location = new System.Drawing.Point(236, 90);
             this.rooms_cmboBox.Name = "rooms_cmboBox";
-            this.rooms_cmboBox.Size = new System.Drawing.Size(68, 33);
+            this.rooms_cmboBox.Size = new System.Drawing.Size(68, 37);
             this.rooms_cmboBox.TabIndex = 4;
             // 
             // rooms_lbl
@@ -148,16 +149,18 @@
             this.rooms_lbl.AutoSize = true;
             this.rooms_lbl.Location = new System.Drawing.Point(231, 52);
             this.rooms_lbl.Name = "rooms_lbl";
-            this.rooms_lbl.Size = new System.Drawing.Size(73, 25);
+            this.rooms_lbl.Size = new System.Drawing.Size(90, 29);
             this.rooms_lbl.TabIndex = 5;
             this.rooms_lbl.Text = "Rooms";
             // 
             // location_comboBox
             // 
             this.location_comboBox.FormattingEnabled = true;
+            this.location_comboBox.Items.AddRange(new object[] {
+            "All"});
             this.location_comboBox.Location = new System.Drawing.Point(335, 90);
             this.location_comboBox.Name = "location_comboBox";
-            this.location_comboBox.Size = new System.Drawing.Size(102, 33);
+            this.location_comboBox.Size = new System.Drawing.Size(102, 37);
             this.location_comboBox.TabIndex = 4;
             // 
             // locations_lbl
@@ -165,7 +168,7 @@
             this.locations_lbl.AutoSize = true;
             this.locations_lbl.Location = new System.Drawing.Point(330, 52);
             this.locations_lbl.Name = "locations_lbl";
-            this.locations_lbl.Size = new System.Drawing.Size(96, 25);
+            this.locations_lbl.Size = new System.Drawing.Size(116, 29);
             this.locations_lbl.TabIndex = 5;
             this.locations_lbl.Text = "Locations";
             // 
@@ -174,7 +177,7 @@
             this.price_lbl.AutoSize = true;
             this.price_lbl.Location = new System.Drawing.Point(450, 52);
             this.price_lbl.Name = "price_lbl";
-            this.price_lbl.Size = new System.Drawing.Size(99, 25);
+            this.price_lbl.Size = new System.Drawing.Size(119, 29);
             this.price_lbl.TabIndex = 5;
             this.price_lbl.Text = "Max Price";
             // 
@@ -182,8 +185,9 @@
             // 
             this.price_txtBox.Location = new System.Drawing.Point(455, 93);
             this.price_txtBox.Name = "price_txtBox";
-            this.price_txtBox.Size = new System.Drawing.Size(86, 30);
+            this.price_txtBox.Size = new System.Drawing.Size(86, 35);
             this.price_txtBox.TabIndex = 6;
+            this.price_txtBox.Text = "0";
             // 
             // completeprocess_btn
             // 
@@ -203,6 +207,7 @@
             this.logout_btn.TabIndex = 1;
             this.logout_btn.Text = "Log out";
             this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // balance_btn
             // 
@@ -212,13 +217,14 @@
             this.balance_btn.TabIndex = 21;
             this.balance_btn.Text = "My Balance";
             this.balance_btn.UseVisualStyleBackColor = true;
+            this.balance_btn.Click += new System.EventHandler(this.balance_btn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 25);
+            this.label1.Size = new System.Drawing.Size(193, 29);
             this.label1.TabIndex = 22;
             this.label1.Text = "Filter Your Choic";
             // 
@@ -227,7 +233,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(12, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 25);
+            this.label2.Size = new System.Drawing.Size(244, 29);
             this.label2.TabIndex = 22;
             this.label2.Text = "Property Market Type";
             // 
@@ -236,13 +242,13 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(588, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 25);
+            this.label3.Size = new System.Drawing.Size(175, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Property Name";
             // 
             // TravellerHomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(967, 644);
             this.Controls.Add(this.label2);
@@ -266,7 +272,7 @@
             this.Controls.Add(this.search_btn);
             this.Controls.Add(this.Properties_datagrid);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TravellerHomePage";
             this.Text = "TravellerHomePage";
             this.Load += new System.EventHandler(this.TravellerHomePage_Load);
