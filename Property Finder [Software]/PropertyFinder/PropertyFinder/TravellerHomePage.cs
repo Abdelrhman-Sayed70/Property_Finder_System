@@ -25,9 +25,19 @@ namespace PropertyFinder
         {
             conn = new OracleConnection(ordb);
             conn.Open();
-            getCurrentUser();
-            fillComboBoxes();
-            fillGridOnload();
+            currentUserId = getCurrentUser();
+            if (currentUserId != -1)
+            {
+                // DO NOT UNCOMMENT!
+                // I am still working on them.
+                //fillComboBoxes();
+                //fillGridOnload();
+                MessageBox.Show("user in!");
+            }
+            else
+            {
+                MessageBox.Show("Please Login First!");
+            }
         }
         private void fillComboBoxes()
         {
@@ -71,7 +81,7 @@ namespace PropertyFinder
         {
 
         }
-        private void getCurrentUser()
+        private int getCurrentUser()
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
@@ -81,96 +91,105 @@ namespace PropertyFinder
             cmd.ExecuteNonQuery();
             try
             {
-                currentUserId = Convert.ToInt32(cmd.Parameters["currentId"].Value);
+                return Convert.ToInt32(cmd.Parameters["currentId"].Value.ToString());
             }
             catch
             {
-                MessageBox.Show("Please Login First!");
+                return -1;
             }
         }
         private void balance_btn_Click(object sender, EventArgs e)
         {
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "getBalance";
-            cmd.Parameters.Add("userId", OracleDbType.Int32, ParameterDirection.Input).Value = currentUserId;
-            cmd.Parameters.Add("userbalance", OracleDbType.Int32, ParameterDirection.Output);
-            cmd.ExecuteNonQuery();
-            try
+            if (currentUserId != -1)
             {
-                string balancemsg = "Your balance is: " + cmd.Parameters["userbalance"].Value.ToString();
-                MessageBox.Show(balancemsg);
-            }
-            catch
-            {
-                MessageBox.Show("Please Login First!");
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "getBalance";
+                cmd.Parameters.Add("userId", OracleDbType.Int32, ParameterDirection.Input).Value = currentUserId;
+                cmd.Parameters.Add("userbalance", OracleDbType.Int32, ParameterDirection.Output);
+                cmd.ExecuteNonQuery();
+                try
+                {
+                    string balancemsg = "Your balance is: " + cmd.Parameters["userbalance"].Value.ToString();
+                    MessageBox.Show(balancemsg);
+                }
+                catch
+                {
+                    MessageBox.Show("Please Login First!");
+                }
             }
         }
         private void logout_btn_Click(object sender, EventArgs e)
         {
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = "logout";
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Logged out Successfully!");
-            this.Hide();
-            LogInPage logInPage = new LogInPage();
-            logInPage.ShowDialog();
-            this.Close();
+            if (currentUserId != -1)
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "logout";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Logged out Successfully!");
+                this.Hide();
+                LogInPage logInPage = new LogInPage();
+                logInPage.ShowDialog();
+                this.Close();
+            }
         }
         private void search_btn_Click(object sender, EventArgs e)
         {
-            int price = Convert.ToInt32(price_txtBox.Text.ToString());
-            string priceCond = "";
-            if (price > 0)
-                priceCond = " and property_cost <= " + price;
-
-            string loc = location_comboBox.SelectedItem.ToString();
-            string locCond = "";
-            if (loc != "All")
-                locCond = " and property_location =" + loc;
-
-            String roomCond = "";
-            int rooms = 0;
-            if (rooms_cmboBox.SelectedItem.ToString() != "All")
+            if (currentUserId != -1)
             {
-                rooms = Convert.ToInt32(rooms_cmboBox.SelectedItem.ToString());
-                roomCond = " and no_rooms = " + rooms;
+                int price = Convert.ToInt32(price_txtBox.Text.ToString());
+                string priceCond = "";
+                if (price > 0)
+                    priceCond = " and property_cost <= " + price;
+
+                string loc = location_comboBox.SelectedItem.ToString();
+                string locCond = "";
+                if (loc != "All")
+                    locCond = " and property_location =" + loc;
+
+                String roomCond = "";
+                int rooms = 0;
+                if (rooms_cmboBox.SelectedItem.ToString() != "All")
+                {
+                    rooms = Convert.ToInt32(rooms_cmboBox.SelectedItem.ToString());
+                    roomCond = " and no_rooms = " + rooms;
+                }
+
+                string typeCond = "";
+                if (Rent_chkBox.Checked && buy_chkBox.Checked)
+                    typeCond = "and (market_status = rent or market_status = buy)";
+                else if (Rent_chkBox.Checked)
+                    typeCond = "and market_status = rent";
+                else if (buy_chkBox.Checked)
+                    typeCond = "and market_status = buy";
+
+                string nameCond = "";
+                if (Villa_btn.Checked)
+                    nameCond = "and property_name = Villa";
+                else if (land_btn.Checked)
+                    nameCond = "and property_name = Land";
+                else if (House_btn.Checked)
+                    nameCond = "and property_name = House";
+                else if (Appartement_btn.Checked)
+                    nameCond = "and property_name = Appartment";
+
+                Properties_datagrid.Rows.Clear();
+                string serach = "select * from Properties where current_status = 'Y' " + typeCond + roomCond + locCond + priceCond + nameCond;
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = serach;
+                OracleDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    // check it
+                    Properties_datagrid.Rows.Add(dr);
+                }
+                dr.Close();
             }
-
-            string typeCond = "";
-            if (Rent_chkBox.Checked && buy_chkBox.Checked)
-                typeCond = "and (market_status = rent or market_status = buy)";
-            else if (Rent_chkBox.Checked)
-                typeCond = "and market_status = rent";
-            else if (buy_chkBox.Checked)
-                typeCond = "and market_status = buy";
-
-            string nameCond = "";
-            if (Villa_btn.Checked)
-                nameCond = "and property_name = Villa";
-            else if (land_btn.Checked)
-                nameCond = "and property_name = Land";
-            else if (House_btn.Checked)
-                nameCond = "and property_name = House";
-            else if (Appartement_btn.Checked)
-                nameCond = "and property_name = Appartment";
-
-            Properties_datagrid.Rows.Clear();
-            string serach = "select * from Properties where current_status = 'Y' " + typeCond + roomCond + locCond + priceCond + nameCond;
-            OracleCommand cmd = new OracleCommand();
-            cmd.Connection = conn;
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = serach;
-            OracleDataReader dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                // check it
-                Properties_datagrid.Rows.Add(dr);
-            }
-            dr.Close();
         }
     }
 }
