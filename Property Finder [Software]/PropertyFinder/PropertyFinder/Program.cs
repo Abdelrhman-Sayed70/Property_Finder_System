@@ -16,7 +16,7 @@ namespace PropertyFinder
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogInPage());
+            Application.Run(new TravellerHomePage());
         }
     }
 }
