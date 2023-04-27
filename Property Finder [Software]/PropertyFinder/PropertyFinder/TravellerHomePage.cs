@@ -16,11 +16,11 @@ namespace PropertyFinder
         int currentUserId = -1;
         string ordb = "Data source=orcl;User Id=scott;Password=tiger;";
         OracleConnection conn;
+        string[] loc = { "Alexandria", "Assiut", "Aswan", "Beheira", "Bani Suef", "Cairo", "Daqahliya", "Damietta", "Fayyoum", "Gharbiya", "Giza", "Helwan", "Ismailia", "Kafr El Sheikh", "Luxor", "Marsa Matrouh", "Minya", "Monofiya", "New Valley", "North Sinai", "Port Said", "Qalioubiya", "Qena", "Red Sea", "Sharqiya", "Sohag", "South Sinai", "Suez", "Tanta" };
         public TravellerHomePage()
         {
             InitializeComponent();
         }
-
         private void TravellerHomePage_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
@@ -28,39 +28,42 @@ namespace PropertyFinder
             currentUserId = getCurrentUser();
             if (currentUserId != -1)
             {
-                // DO NOT UNCOMMENT!
-                // I am still working on them.
-                //fillComboBoxes();
-                //fillGridOnload();
-                MessageBox.Show("user in!");
+                fillComboBoxRooms();
+                fillloc();
+                fillGridOnload();
             }
             else
             {
                 MessageBox.Show("Please Login First!");
+                this.Hide();
+                LogInPage logInPage = new LogInPage();
+                logInPage.ShowDialog();
+                this.Close();
             }
         }
-        private void fillComboBoxes()
+        private void fillComboBoxRooms()
         {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
-            string[] cols = { "property_location", "no_rooms" };
-            foreach (var col in cols)
+            cmd.CommandText = "select distinct no_rooms from Properties where current_status = 'y'";
+            OracleDataReader dr = cmd.ExecuteReader();
+            while (dr.Read())
             {
-                cmd.CommandText = "select distinct :col from Properties where current_status = 'Y'";
-                cmd.Parameters.Add("col", col);
-                OracleDataReader dr = cmd.ExecuteReader();
-                while (dr.Read())
-                {
-                    if (col == "property_location")
-                        location_comboBox.Items.Add(dr[0]);
-                    else
-                        rooms_cmboBox.Items.Add(dr[0]);
-                }
-                dr.Close();
+                rooms_cmboBox.Items.Add(dr[0]);
+            }
+            dr.Close();
+            rooms_cmboBox.SelectedItem = "All";
+        }
+        private void fillloc()
+        {
+            int num = 0;
+            while (num < loc.Length)
+            {
+                location_comboBox.Items.Add(loc[num]);
+                num += 1;
             }
             location_comboBox.SelectedItem = "All";
-            rooms_cmboBox.SelectedItem = "All";
         }
         private void fillGridOnload()
         {
@@ -70,11 +73,22 @@ namespace PropertyFinder
             cmd.CommandText = "getPropsOnLoad";
             cmd.Parameters.Add("props", OracleDbType.RefCursor, ParameterDirection.Output);
             OracleDataReader dr = cmd.ExecuteReader();
+            DataTable dataTable = new DataTable();
+            for (int i = 0; i < dr.FieldCount; i++)
+            {
+                DataColumn column = new DataColumn(dr.GetName(i));
+                dataTable.Columns.Add(column);
+            }
             while (dr.Read())
             {
-                // check it
-                Properties_datagrid.Rows.Add(dr);
+                DataRow row = dataTable.NewRow();
+                for (int i = 0; i < dr.FieldCount; i++)
+                {
+                    row[i] = dr.GetValue(i);
+                }
+                dataTable.Rows.Add(row);
             }
+            Properties_datagrid.DataSource = dataTable;
             dr.Close();
         }
         private void completeprocess_btn_Click(object sender, EventArgs e)
@@ -130,9 +144,6 @@ namespace PropertyFinder
                 cmd.CommandText = "logout";
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Logged out Successfully!");
-                this.Hide();
-                LogInPage logInPage = new LogInPage();
-                logInPage.ShowDialog();
                 this.Close();
             }
         }
@@ -140,7 +151,11 @@ namespace PropertyFinder
         {
             if (currentUserId != -1)
             {
-                int price = Convert.ToInt32(price_txtBox.Text.ToString());
+                string pricestr = price_txtBox.Text.ToString();
+                int price = 0;
+                bool tst = int.TryParse(pricestr, out price);
+                if (!tst && pricestr != "")
+                    MessageBox.Show("Enter a number!");
                 string priceCond = "";
                 if (price > 0)
                     priceCond = " and property_cost <= " + price;
@@ -148,46 +163,56 @@ namespace PropertyFinder
                 string loc = location_comboBox.SelectedItem.ToString();
                 string locCond = "";
                 if (loc != "All")
-                    locCond = " and property_location =" + loc;
+                    locCond = " and property_location =" + "'" + loc + "'";
 
                 String roomCond = "";
                 int rooms = 0;
                 if (rooms_cmboBox.SelectedItem.ToString() != "All")
                 {
                     rooms = Convert.ToInt32(rooms_cmboBox.SelectedItem.ToString());
-                    roomCond = " and no_rooms = " + rooms;
+                    roomCond = " and no_rooms = " + "'" + rooms + "'";
                 }
 
                 string typeCond = "";
                 if (Rent_chkBox.Checked && buy_chkBox.Checked)
-                    typeCond = "and (market_status = rent or market_status = buy)";
+                    typeCond = "and (market_status = 'rent' or market_status = 'buy')";
                 else if (Rent_chkBox.Checked)
-                    typeCond = "and market_status = rent";
+                    typeCond = "and market_status = 'rent'";
                 else if (buy_chkBox.Checked)
-                    typeCond = "and market_status = buy";
+                    typeCond = "and market_status = 'buy'";
 
                 string nameCond = "";
                 if (Villa_btn.Checked)
-                    nameCond = "and property_name = Villa";
+                    nameCond = "and property_name = 'Villa'";
                 else if (land_btn.Checked)
-                    nameCond = "and property_name = Land";
+                    nameCond = "and property_name = 'Land'";
                 else if (House_btn.Checked)
-                    nameCond = "and property_name = House";
+                    nameCond = "and property_name = 'House'";
                 else if (Appartement_btn.Checked)
-                    nameCond = "and property_name = Appartment";
+                    nameCond = "and property_name = 'Appartment'";
 
-                Properties_datagrid.Rows.Clear();
-                string serach = "select * from Properties where current_status = 'Y' " + typeCond + roomCond + locCond + priceCond + nameCond;
+                string serach = "select * from Properties where current_status = 'y' " + typeCond + roomCond + locCond + priceCond + nameCond;
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = serach;
                 OracleDataReader dr = cmd.ExecuteReader();
+                DataTable dataTable = new DataTable();
+                for (int i = 0; i < dr.FieldCount; i++)
+                {
+                    DataColumn column = new DataColumn(dr.GetName(i));
+                    dataTable.Columns.Add(column);
+                }
                 while (dr.Read())
                 {
-                    // check it
-                    Properties_datagrid.Rows.Add(dr);
+                    DataRow row = dataTable.NewRow();
+                    for (int i = 0; i < dr.FieldCount; i++)
+                    {
+                        row[i] = dr.GetValue(i);
+                    }
+                    dataTable.Rows.Add(row);
                 }
+                Properties_datagrid.DataSource = dataTable;
                 dr.Close();
             }
         }
