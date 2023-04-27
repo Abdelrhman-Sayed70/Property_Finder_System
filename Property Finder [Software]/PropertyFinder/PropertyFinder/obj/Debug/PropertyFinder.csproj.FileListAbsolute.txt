@@ -16,3 +16,37 @@ F:\visual_studio_projects\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder
 F:\visual_studio_projects\PropertyFinder\PropertyFinder\bin\Debug\Oracle.DataAccess.dll
 F:\visual_studio_projects\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.CopyComplete
 F:\visual_studio_projects\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.PaymentPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.exe.config
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.exe
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.pdb
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.AssemblyReference.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.SuggestedBindingRedirects.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.HostHomePage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.HostProperties.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.LogInPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.PaymentPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Properties.Resources.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.SignUpPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.TravellerHomePage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.GenerateResource.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.CoreCompileInputs.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.CopyComplete
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.exe
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.pdb
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.exe.config
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.exe
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\bin\Debug\PropertyFinder.pdb
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.AssemblyReference.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.SuggestedBindingRedirects.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.HostHomePage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.HostProperties.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.LogInPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.PaymentPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Properties.Resources.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.SignUpPage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.TravellerHomePage.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.GenerateResource.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.CoreCompileInputs.cache
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.CopyComplete
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.exe
+F:\Projects Hosted on Git hup\Property_Finder_System\Software\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.pdb
