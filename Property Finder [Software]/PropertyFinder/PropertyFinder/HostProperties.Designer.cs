@@ -32,6 +32,9 @@
             this.Back_btn = new System.Windows.Forms.Button();
             this.hostproperties_dataGrid = new System.Windows.Forms.DataGridView();
             this.save_btn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.rent_radioButton = new System.Windows.Forms.RadioButton();
+            this.buy_redioButton = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.hostproperties_dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 29);
+            this.label1.Size = new System.Drawing.Size(132, 25);
             this.label1.TabIndex = 7;
             this.label1.Text = "My Properties";
             // 
@@ -74,12 +77,49 @@
             this.save_btn.UseVisualStyleBackColor = true;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(365, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(118, 25);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Market Sate";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // rent_radioButton
+            // 
+            this.rent_radioButton.AutoSize = true;
+            this.rent_radioButton.Location = new System.Drawing.Point(501, 64);
+            this.rent_radioButton.Name = "rent_radioButton";
+            this.rent_radioButton.Size = new System.Drawing.Size(73, 29);
+            this.rent_radioButton.TabIndex = 10;
+            this.rent_radioButton.TabStop = true;
+            this.rent_radioButton.Text = "Rent";
+            this.rent_radioButton.UseVisualStyleBackColor = true;
+            this.rent_radioButton.CheckedChanged += new System.EventHandler(this.rent_radioButton_CheckedChanged);
+            // 
+            // buy_redioButton
+            // 
+            this.buy_redioButton.AutoSize = true;
+            this.buy_redioButton.Location = new System.Drawing.Point(661, 62);
+            this.buy_redioButton.Name = "buy_redioButton";
+            this.buy_redioButton.Size = new System.Drawing.Size(67, 29);
+            this.buy_redioButton.TabIndex = 11;
+            this.buy_redioButton.TabStop = true;
+            this.buy_redioButton.Text = "Buy";
+            this.buy_redioButton.UseVisualStyleBackColor = true;
+            this.buy_redioButton.CheckedChanged += new System.EventHandler(this.buy_redioButton_CheckedChanged);
+            // 
             // HostProperties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(874, 468);
+            this.Controls.Add(this.buy_redioButton);
+            this.Controls.Add(this.rent_radioButton);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Back_btn);
             this.Controls.Add(this.hostproperties_dataGrid);
@@ -101,5 +141,8 @@
         private System.Windows.Forms.Button Back_btn;
         private System.Windows.Forms.DataGridView hostproperties_dataGrid;
         private System.Windows.Forms.Button save_btn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rent_radioButton;
+        private System.Windows.Forms.RadioButton buy_redioButton;
     }
 }

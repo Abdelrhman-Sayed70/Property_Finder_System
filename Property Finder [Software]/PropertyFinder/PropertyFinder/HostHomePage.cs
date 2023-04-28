@@ -154,7 +154,7 @@ namespace PropertyFinder
             oracleCommand.Parameters.Add("no_rooms",          no_rooms);
             oracleCommand.Parameters.Add("user_id", user_id);
             
-            if (property_name != null &&property_location!=""&& property_cost != null && market_status != null && current_status != null&&(no_rooms!=null||(no_rooms==null&&property_name== "land")) )
+            if (property_name != null &&property_location!=""&& property_cost != null && market_status != null && current_status != null&&(no_rooms!=null||(no_rooms==null&&property_name== "Land")) )
             {
                 
                 oracleCommand.ExecuteNonQuery();

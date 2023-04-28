@@ -17,6 +17,10 @@ namespace PropertyFinder
         OracleCommandBuilder builder;
         DataSet ds = new DataSet();
         string id;
+        string cmdstr;
+        string constr;
+        string filter;
+
         public HostProperties(string id)
         {   
             InitializeComponent();
@@ -25,8 +29,8 @@ namespace PropertyFinder
 
         private void HostProperties_Load(object sender, EventArgs e)
         {
-            string constr = "Data source=orcl;User Id=scott; Password=tiger;";
-            string cmdstr = "select * from Properties where user_id = :id";
+            constr = "Data source=orcl;User Id=scott; Password=tiger;";
+            cmdstr = "select * from Properties where user_id = :id";
             adapter = new OracleDataAdapter(cmdstr, constr);
             adapter.SelectCommand.Parameters.Add("id", id);
             adapter.Fill(ds);
@@ -52,6 +56,36 @@ namespace PropertyFinder
             HostHomePage hosthomepage = new HostHomePage();
             hosthomepage.ShowDialog();
             this.Close();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rent_radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+            ds.Clear();
+            cmdstr = "select * from Properties where user_id = :id and MARKET_STATUS = :filter";
+            filter = "Rent";
+            adapter = new OracleDataAdapter(cmdstr, constr);
+            adapter.SelectCommand.Parameters.Add("id", id);
+            adapter.SelectCommand.Parameters.Add("filter", filter);
+            adapter.Fill(ds);
+            hostproperties_dataGrid.DataSource = ds.Tables[0];
+        }
+
+        private void buy_redioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            ds.Clear();
+            cmdstr = "select * from Properties where user_id = :id and MARKET_STATUS = :filter";
+            filter = "Buy";
+            adapter = new OracleDataAdapter(cmdstr, constr);
+            adapter.SelectCommand.Parameters.Add("id", id);
+            adapter.SelectCommand.Parameters.Add("filter", filter);
+            adapter.Fill(ds);
+            hostproperties_dataGrid.DataSource = ds.Tables[0];
         }
     }
 }

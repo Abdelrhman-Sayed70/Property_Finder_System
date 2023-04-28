@@ -14,7 +14,6 @@ namespace PropertyFinder
     public partial class TravellerHomePage : Form
     {
         int currentUserId = -1;
-        int property_price;
         string ordb = "Data source=orcl;User Id=scott;Password=tiger;";
         OracleConnection conn;
         string[] loc = { "Alexandria", "Assiut", "Aswan", "Beheira", "Bani Suef", "Cairo", "Daqahliya", "Damietta", "Fayyoum", "Gharbiya", "Giza", "Helwan", "Ismailia", "Kafr El Sheikh", "Luxor", "Marsa Matrouh", "Minya", "Monofiya", "New Valley", "North Sinai", "Port Said", "Qalioubiya", "Qena", "Red Sea", "Sharqiya", "Sohag", "South Sinai", "Suez", "Tanta" };
@@ -27,7 +26,6 @@ namespace PropertyFinder
             conn = new OracleConnection(ordb);
             conn.Open();
             currentUserId = getCurrentUser();
-
             if (currentUserId != -1)
             {
                 fillComboBoxRooms();
@@ -36,18 +34,11 @@ namespace PropertyFinder
             }
             else
             {
-                //this.Hide();
-                //SignUpPage signUpPage = new SignUpPage();
-                //signUpPage.ShowDialog();
-                //this.Close();
-
-
                 MessageBox.Show("Please Login First!");
-
-                //this.Hide();
-                //LogInPage logInPage = new LogInPage();
-                //logInPage.ShowDialog();
-                //this.Close();
+                this.Hide();
+                LogInPage logInPage = new LogInPage();
+                logInPage.ShowDialog();
+                this.Close();
             }
         }
         private void fillComboBoxRooms()
@@ -102,10 +93,6 @@ namespace PropertyFinder
         }
         private void completeprocess_btn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            PaymentPage paymentPage = new PaymentPage(currentUserId, property_price);
-            paymentPage.ShowDialog();
-            this.Close();
 
         }
         private int getCurrentUser()
@@ -143,7 +130,6 @@ namespace PropertyFinder
                 }
                 catch
                 {
-
                     MessageBox.Show("Please Login First!");
                 }
             }
