@@ -31,11 +31,6 @@ namespace PropertyFinder
 
         }
 
-        private void Login_btn_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void showpassword_chkBox_CheckedChanged(object sender, EventArgs e)
         {
             if (!showpassword_chkBox.Checked)
@@ -69,7 +64,7 @@ namespace PropertyFinder
 
         private void login_btn_Click_1(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

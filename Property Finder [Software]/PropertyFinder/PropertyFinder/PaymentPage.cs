@@ -18,10 +18,14 @@ namespace PropertyFinder
         string ordb = "Data source=orcl;User Id=scott;Password=tiger;";
         OracleConnection conn;
         int user_ID;
+        int price;
 
-        public PaymentPage(int userID)
+        public PaymentPage(int userID, int property_price)
         {
-            user_ID = userID;
+            //user_ID = userID;
+            //price = property_price;
+            user_ID = 1;
+            price = 10000;
             InitializeComponent();
         }
 
@@ -40,15 +44,24 @@ namespace PropertyFinder
                 OracleCommand cmd = new OracleCommand();
                 cmd.Connection = conn;
                 cmd.CommandText = "SELECT * FROM USERS WHERE USER_ID = :id";
-                cmd.Parameters.Add("id", 1);
-                //cmd.Parameters.Add("id", user_ID);
+                cmd.Parameters.Add("id", user_ID);
 
                 OracleDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
                     if (dr["USER_PASSWORD"].ToString() == user_password)
                     {
-                        MessageBox.Show("Successfully");
+                        //check user balance
+                        int user_balance = Convert.ToInt32(dr["USER_BALANCE"]);
+                        if (user_balance >= price)
+                        {
+                            UpdateUserBalance(user_balance);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Operation failed, there is not enough money...\nYour balance is: " + user_balance + "\nProperty Price is: " + price + "\nYou need " + (price - user_balance) + " to complete process");
+                        }
+                        
                     }
                     else
                     {
@@ -59,6 +72,24 @@ namespace PropertyFinder
             
 
         }
+
+        private bool UpdateUserBalance(int user_balance)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "UPDATE USERS SET USER_BALANCE = :balance WHERE USER_ID = :id";
+            cmd.Parameters.Add(":balance", (user_balance - price));
+            cmd.Parameters.Add(":id", user_ID);
+            int r = cmd.ExecuteNonQuery();
+            if(r != -1)
+            {
+                MessageBox.Show("Operation Completed Successfully!");
+                return true;
+            }
+            MessageBox.Show("Failed!\nPlease try again...");
+            return false;
+        }
+
         private bool Validate_Inputs(string credit_card_id, string password)
         {
             Regex credit_card_id_regex = new Regex(@"^[0-9]");
