@@ -40,7 +40,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.Size = new System.Drawing.Size(162, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "My Properties";
             // 
@@ -52,6 +52,7 @@
             this.Back_btn.TabIndex = 6;
             this.Back_btn.Text = "Back";
             this.Back_btn.UseVisualStyleBackColor = true;
+            this.Back_btn.Click += new System.EventHandler(this.Back_btn_Click);
             // 
             // hostproperties_dataGrid
             // 
@@ -71,11 +72,13 @@
             this.save_btn.TabIndex = 4;
             this.save_btn.Text = "Save";
             this.save_btn.UseVisualStyleBackColor = true;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // HostProperties
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(874, 468);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Back_btn);
@@ -85,6 +88,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "HostProperties";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.HostProperties_Load);
             ((System.ComponentModel.ISupportInitialize)(this.hostproperties_dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
