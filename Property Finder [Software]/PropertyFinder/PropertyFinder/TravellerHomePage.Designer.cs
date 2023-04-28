@@ -139,6 +139,8 @@
             // rooms_cmboBox
             // 
             this.rooms_cmboBox.FormattingEnabled = true;
+            this.rooms_cmboBox.Items.AddRange(new object[] {
+            "All"});
             this.rooms_cmboBox.Location = new System.Drawing.Point(236, 90);
             this.rooms_cmboBox.Name = "rooms_cmboBox";
             this.rooms_cmboBox.Size = new System.Drawing.Size(68, 37);

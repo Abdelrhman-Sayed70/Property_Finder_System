@@ -44,6 +44,7 @@
             this.back_btn.TabIndex = 2;
             this.back_btn.Text = "Back";
             this.back_btn.UseVisualStyleBackColor = true;
+            this.back_btn.Click += new System.EventHandler(this.back_btn_Click);
             // 
             // label1
             // 
@@ -85,6 +86,7 @@
             this.pay_btn.TabIndex = 2;
             this.pay_btn.Text = "Pay";
             this.pay_btn.UseVisualStyleBackColor = true;
+            this.pay_btn.Click += new System.EventHandler(this.pay_btn_Click);
             // 
             // PaymentPage
             // 
@@ -98,9 +100,10 @@
             this.Controls.Add(this.pay_btn);
             this.Controls.Add(this.back_btn);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "PaymentPage";
             this.Text = "PaymentPage";
+            this.Load += new System.EventHandler(this.PaymentPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
