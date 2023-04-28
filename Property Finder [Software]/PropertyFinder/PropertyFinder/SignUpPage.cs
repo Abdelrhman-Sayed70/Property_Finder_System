@@ -156,7 +156,6 @@ namespace PropertyFinder
             LogInPage logInPage = new LogInPage();
             logInPage.ShowDialog();
             this.Close();
-
         }
 
         private void username_txtBox_TextChanged(object sender, EventArgs e)
