@@ -22,10 +22,9 @@ namespace PropertyFinder
 
         public PaymentPage(int userID, int property_price)
         {
-            //user_ID = userID;
-            //price = property_price;
-            user_ID = 1;
-            price = 10000;
+            user_ID = userID;
+            price = property_price;
+
             InitializeComponent();
         }
 
