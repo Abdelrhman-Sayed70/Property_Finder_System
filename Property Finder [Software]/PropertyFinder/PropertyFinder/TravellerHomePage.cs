@@ -36,6 +36,12 @@ namespace PropertyFinder
             }
             else
             {
+                //this.Hide();
+                //SignUpPage signUpPage = new SignUpPage();
+                //signUpPage.ShowDialog();
+                //this.Close();
+
+
                 MessageBox.Show("Please Login First!");
             }
         }
@@ -79,6 +85,10 @@ namespace PropertyFinder
         }
         private void completeprocess_btn_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            PaymentPage paymentPage = new PaymentPage(currentUserId);
+            paymentPage.ShowDialog();
+            this.Close();
 
         }
         private int getCurrentUser()
