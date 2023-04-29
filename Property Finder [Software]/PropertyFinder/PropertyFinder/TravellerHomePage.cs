@@ -23,6 +23,7 @@ namespace PropertyFinder
         }
         private void TravellerHomePage_Load(object sender, EventArgs e)
         {
+            Properties_datagrid.ReadOnly = true;
             conn = new OracleConnection(ordb);
             conn.Open();
             currentUserId = getCurrentUser();
@@ -89,6 +90,8 @@ namespace PropertyFinder
                 dataTable.Rows.Add(row);
             }
             Properties_datagrid.DataSource = dataTable;
+            Properties_datagrid.Columns[0].Visible = false;
+            Properties_datagrid.Columns[7].Visible = false;
             dr.Close();
         }
         private void completeprocess_btn_Click(object sender, EventArgs e)
@@ -224,6 +227,11 @@ namespace PropertyFinder
         private void TravellerHomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
+        }
+
+        private void price_txtBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
