@@ -272,6 +272,10 @@ namespace PropertyFinder
                 MessageBox.Show("Logged out Successfully!");
                 this.Close();
             }
+            this.Hide();
+            LogInPage logInPage = new LogInPage();  
+            logInPage.ShowDialog();   
+            this.Close();
         }
     }
 }
