@@ -182,11 +182,11 @@ namespace PropertyFinder
 
                 string typeCond = "";
                 if (Rent_chkBox.Checked && buy_chkBox.Checked)
-                    typeCond = "and (market_status = 'rent' or market_status = 'buy')";
+                    typeCond = "and (market_status = 'Rent' or market_status = 'Buy')";
                 else if (Rent_chkBox.Checked)
-                    typeCond = "and market_status = 'rent'";
+                    typeCond = "and market_status = 'Rent'";
                 else if (buy_chkBox.Checked)
-                    typeCond = "and market_status = 'buy'";
+                    typeCond = "and market_status = 'Buy'";
 
                 string nameCond = "";
                 if (Villa_btn.Checked)
@@ -230,6 +230,11 @@ namespace PropertyFinder
         }
 
         private void price_txtBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buy_chkBox_CheckedChanged(object sender, EventArgs e)
         {
 
         }

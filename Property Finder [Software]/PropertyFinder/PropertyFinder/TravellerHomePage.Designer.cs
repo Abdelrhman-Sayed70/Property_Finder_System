@@ -91,6 +91,7 @@
             this.buy_chkBox.TabIndex = 2;
             this.buy_chkBox.Text = "Buy";
             this.buy_chkBox.UseVisualStyleBackColor = true;
+            this.buy_chkBox.CheckedChanged += new System.EventHandler(this.buy_chkBox_CheckedChanged);
             // 
             // Villa_btn
             // 
