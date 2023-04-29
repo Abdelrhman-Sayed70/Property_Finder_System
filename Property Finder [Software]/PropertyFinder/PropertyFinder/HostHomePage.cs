@@ -105,6 +105,12 @@ namespace PropertyFinder
 
         string db = "Data source=orcl;User Id=scott; Password=tiger;";
         OracleConnection conn;
+
+        private void HostHomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
+
         public HostHomePage()
         {
            

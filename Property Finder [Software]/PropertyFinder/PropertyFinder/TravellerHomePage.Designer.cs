@@ -277,6 +277,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "TravellerHomePage";
             this.Text = "TravellerHomePage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TravellerHomePage_FormClosing);
             this.Load += new System.EventHandler(this.TravellerHomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Properties_datagrid)).EndInit();
             this.ResumeLayout(false);

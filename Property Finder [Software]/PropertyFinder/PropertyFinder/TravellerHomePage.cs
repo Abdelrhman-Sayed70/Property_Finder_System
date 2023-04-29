@@ -216,5 +216,10 @@ namespace PropertyFinder
                 dr.Close();
             }
         }
+
+        private void TravellerHomePage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Dispose();
+        }
     }
 }

@@ -15,21 +15,58 @@ namespace PropertyFinder
     {
         string ordb = "Data source=orcl;User Id=scott;Password=tiger;";
         OracleConnection conn;
+
         int userId;
+
         public LogInPage()
         {
             InitializeComponent();
+        }
+
+        private int GetCurrentUser()
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandText = "getCurrentUser";
+            cmd.Parameters.Add("currentId", OracleDbType.Int32, ParameterDirection.Output);
+            cmd.ExecuteNonQuery();
+            try
+            {
+                return Convert.ToInt32(cmd.Parameters["currentId"].Value.ToString());
+            }
+            catch
+            {
+                return -1;
+            }
         }
 
         private void LogInPage_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
             conn.Open();
-        }
 
-        private void create_account_lbl_Click(object sender, EventArgs e)
-        {
+            int userid = GetCurrentUser();
+            if (userid != -1)
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText =
+                @"
+                select *
+                from users
+                where user_id = :id
+                ";
+                cmd.Parameters.Add("id", userid.ToString());
+                OracleDataReader dr = cmd.ExecuteReader();
+                string username = "Huh";
+                if (dr.Read())
+                    username = dr["user_name"].ToString();
 
+                MessageBox.Show("Authentication Created Successfully. Welcome " + username);
+                GoToUserHomePage(userid);
+            }
         }
 
         private void showpassword_chkBox_CheckedChanged(object sender, EventArgs e)
@@ -65,7 +102,7 @@ namespace PropertyFinder
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            // Get the user input for email and password
+            // Get the user inputs: Name & Password
             string username = username_txtBox.Text;
             string password = password_txtBox.Text;
 
@@ -105,6 +142,7 @@ namespace PropertyFinder
                 // Determine the appropriate URL based on the user's role
                 if (role == "Traveller")
                 {
+                    //MessageBox.Show("Traveller");
                     this.Hide();
                     TravellerHomePage travelerHomePage = new TravellerHomePage();
                     travelerHomePage.ShowDialog();
@@ -112,6 +150,8 @@ namespace PropertyFinder
                 }
                 else if (role == "Host")
                 {
+                    // MessageBox.Show("Host");
+
                     this.Hide();
                     HostHomePage hostHomePage = new HostHomePage();
                     hostHomePage.ShowDialog();
@@ -126,6 +166,7 @@ namespace PropertyFinder
 
         private bool AddUserToCurrentUserTable(int userId)
         {
+            clear_current_user();
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
 
@@ -162,7 +203,6 @@ namespace PropertyFinder
                     MessageBox.Show("Invalid Username or Password");
                     return false;
                 }
-
             }
             MessageBox.Show("Invalid Username or Password");
             return false;
@@ -176,6 +216,21 @@ namespace PropertyFinder
                 return false;
             }
             return true;
+        }
+        private void clear_current_user()
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "delete from current_users";
+            int res = cmd.ExecuteNonQuery();
+        }
+
+        private void username_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

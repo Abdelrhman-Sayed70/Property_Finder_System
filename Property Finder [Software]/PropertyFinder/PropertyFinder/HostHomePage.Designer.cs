@@ -270,6 +270,7 @@
             this.Name = "HostHomePage";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "HostHomePage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HostHomePage_FormClosing);
             this.Load += new System.EventHandler(this.HostHomePage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
