@@ -56,6 +56,7 @@
             this.username_txtBox.Name = "username_txtBox";
             this.username_txtBox.Size = new System.Drawing.Size(211, 34);
             this.username_txtBox.TabIndex = 1;
+            this.username_txtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.username_txtBox_KeyPress_1);
             // 
             // password_lbl
             // 

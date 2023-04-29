@@ -42,7 +42,7 @@ namespace PropertyFinder
             if (buy_chkBox.Checked == true)
             {
                 Rent_chkBox.Checked = false;
-                market_status ="buy";
+                market_status ="Buy";
             }
         }
 
@@ -151,13 +151,13 @@ namespace PropertyFinder
             }
                         //insert into properties values(8,      'land',   'cairo',             10,              'buy',          'y',         10,           1)
             oracleCommand.CommandText = "insert into properties values(:property_id,:property_name,:property_location,:property_cost,:market_status,:current_status,:no_rooms,:user_id)";
-            oracleCommand.Parameters.Add("property_id",property_id);
-            oracleCommand.Parameters.Add("property_name",     property_name);          
+            oracleCommand.Parameters.Add("property_id", property_id);
+            oracleCommand.Parameters.Add("property_name", property_name);          
             oracleCommand.Parameters.Add("property_location", property_location);        
-            oracleCommand.Parameters.Add("property_cost",     property_cost);
-            oracleCommand.Parameters.Add("market_status",      market_status);
-            oracleCommand.Parameters.Add("current_status",    current_status);
-            oracleCommand.Parameters.Add("no_rooms",          no_rooms);
+            oracleCommand.Parameters.Add("property_cost", property_cost);
+            oracleCommand.Parameters.Add("market_status", market_status);
+            oracleCommand.Parameters.Add("current_status", current_status);
+            oracleCommand.Parameters.Add("no_rooms", no_rooms);
             oracleCommand.Parameters.Add("user_id", user_id);
             
             if (property_name != null &&property_location!=""&& property_cost != null && market_status != null && current_status != null&&(no_rooms!=null||(no_rooms==null&&property_name== "Land")) )

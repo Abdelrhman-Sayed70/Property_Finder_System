@@ -41,6 +41,26 @@ namespace PropertyFinder
             }
         }
 
+        private string GetUserName(int userid)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            select *
+            from users
+            where user_id = :id
+            ";
+            cmd.Parameters.Add("id", userid.ToString());
+            OracleDataReader dr = cmd.ExecuteReader();
+            string username = "Huh";
+            if (dr.Read())
+                username = dr["user_name"].ToString();
+
+            return username;
+        }
+
         private void LogInPage_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(ordb);
@@ -49,21 +69,7 @@ namespace PropertyFinder
             int userid = GetCurrentUser();
             if (userid != -1)
             {
-                OracleCommand cmd = new OracleCommand();
-                cmd.Connection = conn;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText =
-                @"
-                select *
-                from users
-                where user_id = :id
-                ";
-                cmd.Parameters.Add("id", userid.ToString());
-                OracleDataReader dr = cmd.ExecuteReader();
-                string username = "Huh";
-                if (dr.Read())
-                    username = dr["user_name"].ToString();
-
+                string username = GetUserName(userid);
                 MessageBox.Show("Authentication Created Successfully. Welcome " + username);
                 GoToUserHomePage(userid);
             }
@@ -118,10 +124,10 @@ namespace PropertyFinder
                         // Go to home page pased on his role if he is:
                         // Traveller -> go to Traveller home page
                         // Host -> go to Host home page
-
+                        string name = GetUserName(userId);
+                        MessageBox.Show("Logged in Successfully. Welcome " + name);
                         GoToUserHomePage(userId);
                     }
-
                 }
             }
         }
@@ -142,7 +148,6 @@ namespace PropertyFinder
                 // Determine the appropriate URL based on the user's role
                 if (role == "Traveller")
                 {
-                    //MessageBox.Show("Traveller");
                     this.Hide();
                     TravellerHomePage travelerHomePage = new TravellerHomePage();
                     travelerHomePage.ShowDialog();
@@ -150,8 +155,6 @@ namespace PropertyFinder
                 }
                 else if (role == "Host")
                 {
-                    // MessageBox.Show("Host");
-
                     this.Hide();
                     HostHomePage hostHomePage = new HostHomePage();
                     hostHomePage.ShowDialog();
@@ -226,6 +229,14 @@ namespace PropertyFinder
         }
 
         private void username_txtBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void username_txtBox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == ' ')
             {

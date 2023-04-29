@@ -46,7 +46,7 @@ namespace PropertyFinder
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select distinct no_rooms from Properties where current_status = 'y'";
+            cmd.CommandText = "select distinct no_rooms from Properties where current_status = 'y' and property_name != 'Land'";
             OracleDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
