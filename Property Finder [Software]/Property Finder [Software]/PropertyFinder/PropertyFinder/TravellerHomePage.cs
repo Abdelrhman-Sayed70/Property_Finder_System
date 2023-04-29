@@ -96,7 +96,192 @@ namespace PropertyFinder
         }
         private void completeprocess_btn_Click(object sender, EventArgs e)
         {
+            if (Properties_datagrid.SelectedRows.Count <= 0)
+            {
+                MessageBox.Show("No Selected Property!");
+                return;
+            }
+            // Get the first selected row (there can be only one)
+            DataGridViewRow selectedRow = Properties_datagrid.SelectedRows[0];
 
+            // Access the values of the cells in the selected row
+            int hostid = Convert.ToInt32(selectedRow.Cells["USER_ID"].Value.ToString());
+            int cost = Convert.ToInt32(selectedRow.Cells["Property_Cost"].Value.ToString());
+            int propertyId = Convert.ToInt32(selectedRow.Cells["Property_id"].Value.ToString());
+            string market_statues = selectedRow.Cells["MARKET_STATUS"].Value.ToString();
+
+            int TravellerBalance = GetUserBalance(currentUserId);
+            if (TravellerBalance < cost)
+            {
+                MessageBox.Show("Not Enough Money :(");
+                return;
+            }
+
+            UpdateHostBalance(hostid, cost);
+            UpdateTravellerBalance(currentUserId, cost);
+            
+            if (market_statues == "Buy")
+            {
+                Properties_datagrid.Rows.Remove(Properties_datagrid.SelectedRows[0]);
+                DeleteProperty(propertyId);
+                MessageBox.Show("Property Bought Successfully");
+            }
+            else if (market_statues == "Rent")
+            {
+                Properties_datagrid.Rows.Remove(Properties_datagrid.SelectedRows[0]);
+                UpdatePropertyStatus(propertyId);
+                DateTime start = DateTime.Now;
+                DateTime end = start.AddYears(1);
+                AddToMarket(start, end, currentUserId, propertyId);
+            }
+        }
+
+        void UpdatePropertyStatus(int id)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            update properties
+            set current_status = 'n'
+            where property_id = :id
+            ";
+            cmd.Parameters.Add("id", id);
+            
+            int r = cmd.ExecuteNonQuery(); 
+            if (r != -1)
+            {
+                MessageBox.Show("Property Current Statues Changed to False");
+
+            }
+        }
+
+        int GetReservationID()
+        {
+            int maxID, newID;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "GetReservationID";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("id", OracleDbType.Int32, ParameterDirection.Output);
+            cmd.ExecuteNonQuery();
+            try
+            {
+                maxID = Convert.ToInt32(cmd.Parameters["id"].Value.ToString());
+                newID = maxID + 1;
+            }
+            catch
+            {
+                newID = 1;
+            }
+            return newID;
+        }
+
+        private void AddToMarket(DateTime start, DateTime end, int travellerid, int propertyid)
+        {
+            int reservationid = GetReservationID();
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            insert into in_market_properties
+            values (:reservationid, :stardate, :enddate, :travellerid, :propertyid)
+            ";
+            cmd.Parameters.Add("reservationid", reservationid);
+            cmd.Parameters.Add("stardate", start);
+            cmd.Parameters.Add("enddate", end);
+            cmd.Parameters.Add("travellerid", travellerid);
+            cmd.Parameters.Add("propertyid", propertyid);
+
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1)
+            {
+                MessageBox.Show("Property Added in Market!");
+            }
+
+        }
+        
+        private void DeleteProperty(int id)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            delete from properties
+            where property_id = :id
+            ";
+            cmd.Parameters.Add("id", id);
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1)
+            {
+                MessageBox.Show("Property Dropped Successfully");
+            }
+        }
+
+        private int GetUserBalance(int id)
+        {
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            select user_balance
+            from users
+            where user_id = :id
+            ";
+            cmd.Parameters.Add("id", id);
+            OracleDataReader dr = cmd.ExecuteReader();
+            int balance = 0;
+            if (dr.Read())
+            {
+                balance = Convert.ToInt32(dr[0].ToString());
+            }
+            return balance; 
+        }
+
+        private void UpdateHostBalance(int id, int cost)
+        {
+            int finalbalance = GetUserBalance(id) + cost;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            update users
+            set user_balance = :finalbalance
+            where user_id = :id
+            ";
+            cmd.Parameters.Add("finalbalance", finalbalance);
+            cmd.Parameters.Add("id", id);
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1)
+            {
+                MessageBox.Show("Host Balance Updated Sucessfully");
+            }
+        }
+
+        private void UpdateTravellerBalance(int id, int cost)
+        {
+            int finalbalance = GetUserBalance(id) - cost;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText =
+            @"
+            update users
+            set user_balance = :finalbalance
+            where user_id = :id
+            ";
+            cmd.Parameters.Add("finalbalance", finalbalance);
+            cmd.Parameters.Add("id", id);
+            int r = cmd.ExecuteNonQuery();
+            if (r != -1)
+            {
+                MessageBox.Show("Traveller Balance Updated Sucessfully");
+            }
         }
         private int getCurrentUser()
         {
