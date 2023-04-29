@@ -48,6 +48,7 @@ namespace PropertyFinder
         {
             builder = new OracleCommandBuilder(adapter);
             adapter.Update(ds.Tables[0]);
+            MessageBox.Show("Changes Saved Successfully!");
         }
 
         private void Back_btn_Click(object sender, EventArgs e)

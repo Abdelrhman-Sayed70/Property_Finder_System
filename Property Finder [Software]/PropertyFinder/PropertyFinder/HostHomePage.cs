@@ -17,12 +17,17 @@ namespace PropertyFinder
 {    
     public partial class HostHomePage : Form
     {
+        string db = "Data source=orcl;User Id=scott; Password=tiger;";
+        OracleConnection conn;
+
         string property_id, property_name, property_location, property_cost, market_status, current_status, no_rooms, user_id = "-1";
         string[] loc = { "Alexandria", "Assiut", "Aswan", "Beheira", "Bani Suef", "Cairo", "Daqahliya", "Damietta", "Fayyoum", "Gharbiya", "Giza", "Helwan", "Ismailia", "Kafr El Sheikh", "Luxor", "Marsa Matrouh", "Minya", "Monofiya", "New Valley", "North Sinai", "Port Said", "Qalioubiya", "Qena", "Red Sea", "Sharqiya", "Sohag", "South Sinai", "Suez", "Tanta" };
+
         private void House_btn_CheckedChanged(object sender, EventArgs e)
         {
             if (House_btn.Checked == true)
-            { property_name = "House";
+            { 
+                property_name = "House";
                 textBox1.Enabled = true;
             }
         }
@@ -33,7 +38,7 @@ namespace PropertyFinder
             {
                 property_name = "Land";
                 no_rooms = null;
-                textBox1.Enabled=false;
+                textBox1.Enabled = false;
             }
         }
 
@@ -54,7 +59,6 @@ namespace PropertyFinder
                 market_status = "Rent";
 
             }
-
         }
         private int getCurrentUser()
         {
@@ -88,8 +92,6 @@ namespace PropertyFinder
 
         }
 
-        
-
         private void HostHomePage_Load(object sender, EventArgs e)
         {
             conn = new OracleConnection(db);
@@ -98,17 +100,23 @@ namespace PropertyFinder
         }
 
         private void Villa_btn_CheckedChanged(object sender, EventArgs e)
-        { if (Villa_btn.Checked==true)
-            property_name = "Villa";
-            textBox1.Enabled = true;
+        {
+            if (Villa_btn.Checked == true)
+            {
+                property_name = "Villa";
+                textBox1.Enabled = true;
+            }
         }
 
-        string db = "Data source=orcl;User Id=scott; Password=tiger;";
-        OracleConnection conn;
-
+        
         private void HostHomePage_FormClosing(object sender, FormClosingEventArgs e)
         {
             conn.Dispose();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
         public HostHomePage()
@@ -123,33 +131,49 @@ namespace PropertyFinder
             }
             
         }
-
+        private int getPropertyID()
+        {
+            int maxID, newID;
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = "getPropertyID";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("id", OracleDbType.Int32, ParameterDirection.Output);
+            cmd.ExecuteNonQuery();
+            try
+            {
+                maxID = Convert.ToInt32(cmd.Parameters["id"].Value.ToString());
+                newID = maxID + 1;
+            }
+            catch
+            {
+                newID = 1;
+            }
+            return newID;
+        }
         private void addproperty_btn_Click(object sender, EventArgs e)
         {
             
             OracleCommand oracleCommand = new OracleCommand();
-            OracleCommand oracleCommand2 = new OracleCommand();
-            oracleCommand2.Connection = conn;
             oracleCommand.Connection = conn;
-            oracleCommand2.CommandText = "SELECT count(*)FROM properties";
-            OracleDataReader dr = oracleCommand2.ExecuteReader();
+            // OracleCommand oracleCommand2 = new OracleCommand();
+            // oracleCommand2.Connection = conn;
+            // oracleCommand2.CommandText = "SELECT count(*)FROM properties";
+            // OracleDataReader dr = oracleCommand2.ExecuteReader();
 
-            if (dr.Read())
-            {   
- 
-                property_id = dr[0].ToString();
-                int id = int.Parse(property_id);
-                id+=1;
-                property_id = id.ToString();
-            }
+            int id = getPropertyID();
+            property_id = id.ToString();
+
             current_status = "y";
             if (location_comboBox.SelectedIndex != -1)
-            { property_location = location_comboBox.SelectedItem.ToString(); }
+            { 
+                property_location = location_comboBox.SelectedItem.ToString(); 
+            }
             else
             {
                 property_location = "";
             }
-                        //insert into properties values(8,      'land',   'cairo',             10,              'buy',          'y',         10,           1)
+
             oracleCommand.CommandText = "insert into properties values(:property_id,:property_name,:property_location,:property_cost,:market_status,:current_status,:no_rooms,:user_id)";
             oracleCommand.Parameters.Add("property_id", property_id);
             oracleCommand.Parameters.Add("property_name", property_name);          
@@ -159,10 +183,10 @@ namespace PropertyFinder
             oracleCommand.Parameters.Add("current_status", current_status);
             oracleCommand.Parameters.Add("no_rooms", no_rooms);
             oracleCommand.Parameters.Add("user_id", user_id);
-            
-            if (property_name != null &&property_location!=""&& property_cost != null && market_status != null && current_status != null&&(no_rooms!=null||(no_rooms==null&&property_name== "Land")) )
+
+            if (property_name != null && property_location != "" && property_cost != null && market_status != null && current_status != null && (no_rooms != null || (no_rooms == null && property_name == "Land")))
             {
-                
+
                 oracleCommand.ExecuteNonQuery();
                 MessageBox.Show("property added successfully");
                 Rent_chkBox.Checked = false;
@@ -190,9 +214,6 @@ namespace PropertyFinder
             {
                 MessageBox.Show("Please Fill/Select Empty Fields");
             }
-            
-
-           
         }
 
         private void Appartement_btn_CheckedChanged(object sender, EventArgs e)
