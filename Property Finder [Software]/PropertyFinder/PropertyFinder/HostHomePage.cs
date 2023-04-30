@@ -131,6 +131,15 @@ namespace PropertyFinder
             }
             
         }
+
+        private void button_reports_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Reports reports = new Reports();
+            reports.ShowDialog();
+            this.Close();
+        }
+
         private int getPropertyID()
         {
             int maxID, newID;

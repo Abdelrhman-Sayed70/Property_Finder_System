@@ -16,14 +16,14 @@ namespace PropertyFinder {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport_Summarixing : ReportClass {
+    public class CrystalReport_Summarizing : ReportClass {
         
-        public CrystalReport_Summarixing() {
+        public CrystalReport_Summarizing() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport_Summarixing.rpt";
+                return "CrystalReport_Summarizing.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace PropertyFinder {
         
         public override string FullResourceName {
             get {
-                return "PropertyFinder.CrystalReport_Summarixing.rpt";
+                return "PropertyFinder.CrystalReport_Summarizing.rpt";
             }
             set {
                 // Do nothing
@@ -122,9 +122,9 @@ namespace PropertyFinder {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport_Summarixing : Component, ICachedReport {
+    public class CachedCrystalReport_Summarizing : Component, ICachedReport {
         
-        public CachedCrystalReport_Summarixing() {
+        public CachedCrystalReport_Summarizing() {
         }
         
         [Browsable(false)]
@@ -161,7 +161,7 @@ namespace PropertyFinder {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport_Summarixing rpt = new CrystalReport_Summarixing();
+            CrystalReport_Summarizing rpt = new CrystalReport_Summarizing();
             rpt.Site = this.Site;
             return rpt;
         }
