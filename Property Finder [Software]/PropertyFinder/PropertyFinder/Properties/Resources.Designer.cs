@@ -73,6 +73,16 @@ namespace PropertyFinder.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pexels_thirdman_8482876 {
+            get {
+                object obj = ResourceManager.GetObject("pexels-thirdman-8482876", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PikPng_com_logout_png_5199120__1_ {
             get {
                 object obj = ResourceManager.GetObject("PikPng.com_logout-png_5199120 (1)", resourceCulture);
@@ -86,6 +96,16 @@ namespace PropertyFinder.Properties {
         internal static System.Drawing.Bitmap PikPng_com_logout_png_5199120__2_ {
             get {
                 object obj = ResourceManager.GetObject("PikPng.com_logout-png_5199120 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PngItem_40070__1_ {
+            get {
+                object obj = ResourceManager.GetObject("PngItem_40070 (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

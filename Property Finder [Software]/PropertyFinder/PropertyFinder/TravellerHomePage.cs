@@ -431,5 +431,13 @@ namespace PropertyFinder
             logInPage.ShowDialog();
             this.Close();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProfilePage profilePage = new ProfilePage(currentUserId);
+            profilePage.ShowDialog();
+            this.Close();
+        }
     }
 }

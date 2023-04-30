@@ -100,6 +100,12 @@
     <Compile Include="HostHomePage.Designer.cs">
       <DependentUpon>HostHomePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfilePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfilePage.Designer.cs">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     <EmbeddedResource Include="PaymentPage.resx">
       <DependentUpon>PaymentPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ProfilePage.resx">
+      <DependentUpon>ProfilePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -233,6 +242,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PikPng.com_logout-png_5199120 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PngItem_40070 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pexels-thirdman-8482876.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

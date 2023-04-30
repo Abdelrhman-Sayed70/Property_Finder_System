@@ -152,3 +152,4 @@ C:\Users\noura\OneDrive\Documents\Visual Studio 2019\SW-Project\Property_Finder_
 C:\Users\noura\OneDrive\Documents\Visual Studio 2019\SW-Project\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Grouping.resources
 C:\Users\noura\OneDrive\Documents\Visual Studio 2019\SW-Project\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Summary.resources
 C:\Users\noura\OneDrive\Documents\Visual Studio 2019\SW-Project\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Formula.resources
+C:\Users\noura\OneDrive\Documents\Visual Studio 2019\SW-Project\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.ProfilePage.resources
