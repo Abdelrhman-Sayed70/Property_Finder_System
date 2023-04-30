@@ -158,6 +158,14 @@ namespace PropertyFinder
             this.Close();
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ProfilePage profilePage = new ProfilePage(getCurrentUser());
+            profilePage.ShowDialog();
+            this.Close();
+        }
+
         private int getPropertyID()
         {
             int maxID, newID;

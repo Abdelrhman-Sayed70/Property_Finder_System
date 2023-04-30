@@ -48,7 +48,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button_reports = new System.Windows.Forms.Button();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // addproperty_btn
@@ -283,12 +285,25 @@
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::PropertyFinder.Properties.Resources.PngItem_40070__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(1042, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 40;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // HostHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1117, 538);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.button_reports);
             this.Controls.Add(this.textBox1);
@@ -319,6 +334,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HostHomePage_FormClosing);
             this.Load += new System.EventHandler(this.HostHomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +361,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button_reports;
         private System.Windows.Forms.PictureBox logout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
