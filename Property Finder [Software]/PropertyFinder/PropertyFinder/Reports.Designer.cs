@@ -87,7 +87,7 @@ namespace PropertyFinder
             this.button_report_parametar.Name = "button_report_parametar";
             this.button_report_parametar.Size = new System.Drawing.Size(386, 55);
             this.button_report_parametar.TabIndex = 4;
-            this.button_report_parametar.Text = "Report Parametar";
+            this.button_report_parametar.Text = "Report Parameter";
             this.button_report_parametar.UseVisualStyleBackColor = true;
             this.button_report_parametar.Click += new System.EventHandler(this.button_report_parametar_Click);
             // 

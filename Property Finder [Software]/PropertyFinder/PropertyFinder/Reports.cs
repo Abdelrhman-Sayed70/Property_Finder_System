@@ -19,7 +19,10 @@ namespace PropertyFinder
 
         private void button_report_grouping_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Report_Grouping report_Grouping = new Report_Grouping();
+            report_Grouping.ShowDialog();
+            this.Close();
         }
 
         private void button_report_summary_Click(object sender, EventArgs e)
