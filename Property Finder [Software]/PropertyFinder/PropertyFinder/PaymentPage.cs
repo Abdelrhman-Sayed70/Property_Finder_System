@@ -113,5 +113,13 @@ namespace PropertyFinder
             travellerHomePage.ShowDialog();
             this.Close();
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TravellerHomePage travellerHomePage = new TravellerHomePage();
+            travellerHomePage.ShowDialog();
+            this.Close();
+        }
     }
 }
