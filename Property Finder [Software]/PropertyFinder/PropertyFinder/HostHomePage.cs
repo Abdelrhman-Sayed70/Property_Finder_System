@@ -140,6 +140,24 @@ namespace PropertyFinder
             this.Close();
         }
 
+        private void logout_Click(object sender, EventArgs e)
+        {
+            if (user_id != "-1")
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = "logout";
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Logged out Successfully!");
+                this.Close();
+            }
+            this.Hide();
+            LogInPage logInPage = new LogInPage();
+            logInPage.ShowDialog();
+            this.Close();
+        }
+
         private int getPropertyID()
         {
             int maxID, newID;

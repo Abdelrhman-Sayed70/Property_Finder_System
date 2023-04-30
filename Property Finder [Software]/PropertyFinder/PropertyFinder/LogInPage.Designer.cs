@@ -44,7 +44,7 @@
             this.username_lbl.AutoSize = true;
             this.username_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_lbl.ForeColor = System.Drawing.Color.White;
-            this.username_lbl.Location = new System.Drawing.Point(32, 163);
+            this.username_lbl.Location = new System.Drawing.Point(27, 163);
             this.username_lbl.Name = "username_lbl";
             this.username_lbl.Size = new System.Drawing.Size(102, 25);
             this.username_lbl.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.username_txtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.username_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_txtBox.ForeColor = System.Drawing.Color.White;
-            this.username_txtBox.Location = new System.Drawing.Point(140, 161);
+            this.username_txtBox.Location = new System.Drawing.Point(135, 161);
             this.username_txtBox.Name = "username_txtBox";
             this.username_txtBox.Size = new System.Drawing.Size(301, 30);
             this.username_txtBox.TabIndex = 1;
@@ -67,7 +67,7 @@
             this.password_lbl.AutoSize = true;
             this.password_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_lbl.ForeColor = System.Drawing.Color.White;
-            this.password_lbl.Location = new System.Drawing.Point(32, 220);
+            this.password_lbl.Location = new System.Drawing.Point(27, 220);
             this.password_lbl.Name = "password_lbl";
             this.password_lbl.Size = new System.Drawing.Size(98, 25);
             this.password_lbl.TabIndex = 0;
@@ -79,7 +79,7 @@
             this.password_txtBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.password_txtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.password_txtBox.ForeColor = System.Drawing.Color.White;
-            this.password_txtBox.Location = new System.Drawing.Point(142, 218);
+            this.password_txtBox.Location = new System.Drawing.Point(137, 218);
             this.password_txtBox.Name = "password_txtBox";
             this.password_txtBox.Size = new System.Drawing.Size(299, 30);
             this.password_txtBox.TabIndex = 1;
@@ -91,7 +91,7 @@
             this.showpassword_chkBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showpassword_chkBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showpassword_chkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.showpassword_chkBox.Location = new System.Drawing.Point(369, 258);
+            this.showpassword_chkBox.Location = new System.Drawing.Point(364, 258);
             this.showpassword_chkBox.Name = "showpassword_chkBox";
             this.showpassword_chkBox.Size = new System.Drawing.Size(72, 24);
             this.showpassword_chkBox.TabIndex = 2;
@@ -109,7 +109,7 @@
             this.login_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.login_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.login_btn.ForeColor = System.Drawing.Color.White;
-            this.login_btn.Location = new System.Drawing.Point(18, 308);
+            this.login_btn.Location = new System.Drawing.Point(13, 308);
             this.login_btn.Name = "login_btn";
             this.login_btn.Size = new System.Drawing.Size(423, 48);
             this.login_btn.TabIndex = 3;
@@ -122,7 +122,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.label1.Location = new System.Drawing.Point(85, 375);
+            this.label1.Location = new System.Drawing.Point(80, 375);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 20);
             this.label1.TabIndex = 0;
@@ -133,7 +133,7 @@
             this.signin_lbl.AutoSize = true;
             this.signin_lbl.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signin_lbl.ForeColor = System.Drawing.Color.White;
-            this.signin_lbl.Location = new System.Drawing.Point(85, 9);
+            this.signin_lbl.Location = new System.Drawing.Point(80, 9);
             this.signin_lbl.Name = "signin_lbl";
             this.signin_lbl.Size = new System.Drawing.Size(320, 114);
             this.signin_lbl.TabIndex = 0;
@@ -145,7 +145,7 @@
             this.signup_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.signup_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.signup_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.signup_btn.Location = new System.Drawing.Point(277, 373);
+            this.signup_btn.Location = new System.Drawing.Point(272, 373);
             this.signup_btn.Name = "signup_btn";
             this.signup_btn.Size = new System.Drawing.Size(90, 22);
             this.signup_btn.TabIndex = 3;
@@ -158,7 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(465, 529);
+            this.ClientSize = new System.Drawing.Size(449, 530);
             this.Controls.Add(this.signup_btn);
             this.Controls.Add(this.login_btn);
             this.Controls.Add(this.showpassword_chkBox);
