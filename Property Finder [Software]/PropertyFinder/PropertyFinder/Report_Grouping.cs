@@ -24,7 +24,7 @@ namespace PropertyFinder
             crystalReportViewer1.ReportSource = CR;
         }
 
-        private void button_back_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
             this.Hide();
             Reports reports = new Reports();

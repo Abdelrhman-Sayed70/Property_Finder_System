@@ -61,5 +61,13 @@ namespace PropertyFinder
         {
 
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HostHomePage hosthomepage = new HostHomePage();
+            hosthomepage.ShowDialog();
+            this.Close();
+        }
     }
 }

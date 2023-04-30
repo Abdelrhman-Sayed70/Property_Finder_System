@@ -30,7 +30,8 @@ namespace PropertyFinder
         private void InitializeComponent()
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.button_back = new System.Windows.Forms.Button();
+            this.logout = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -38,31 +39,35 @@ namespace PropertyFinder
             this.crystalReportViewer1.ActiveViewIndex = -1;
             this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(1, 37);
+            this.crystalReportViewer1.Location = new System.Drawing.Point(1, 62);
             this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.Size = new System.Drawing.Size(799, 407);
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1119, 478);
             this.crystalReportViewer1.TabIndex = 12;
             // 
-            // button_back
+            // logout
             // 
-            this.button_back.Location = new System.Drawing.Point(12, 7);
-            this.button_back.Name = "button_back";
-            this.button_back.Size = new System.Drawing.Size(75, 23);
-            this.button_back.TabIndex = 11;
-            this.button_back.Text = "Back";
-            this.button_back.UseVisualStyleBackColor = true;
-            this.button_back.Click += new System.EventHandler(this.button_back_Click);
+            this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.logout.Image = global::PropertyFinder.Properties.Resources.PikPng_com_logout_png_5199120__2_;
+            this.logout.Location = new System.Drawing.Point(12, 12);
+            this.logout.Name = "logout";
+            this.logout.Size = new System.Drawing.Size(123, 33);
+            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logout.TabIndex = 42;
+            this.logout.TabStop = false;
+            this.logout.Click += new System.EventHandler(this.logout_Click);
             // 
             // Report_Grouping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(1121, 542);
+            this.Controls.Add(this.logout);
             this.Controls.Add(this.crystalReportViewer1);
-            this.Controls.Add(this.button_back);
             this.Name = "Report_Grouping";
             this.Text = "Report_Grouping";
             this.Load += new System.EventHandler(this.Report_Grouping_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -70,6 +75,6 @@ namespace PropertyFinder
         #endregion
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
-        private System.Windows.Forms.Button button_back;
+        private System.Windows.Forms.PictureBox logout;
     }
 }
