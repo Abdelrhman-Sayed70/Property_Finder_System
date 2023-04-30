@@ -118,6 +118,12 @@
     <Compile Include="Report_Parametar.Designer.cs">
       <DependentUpon>Report_Parametar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report_Summary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Summary.Designer.cs">
+      <DependentUpon>Report_Summary.cs</DependentUpon>
+    </Compile>
     <Compile Include="TravellerHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Parametar.resx">
       <DependentUpon>Report_Parametar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Summary.resx">
+      <DependentUpon>Report_Summary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUpPage.resx">
       <DependentUpon>SignUpPage.cs</DependentUpon>

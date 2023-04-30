@@ -114,6 +114,7 @@ namespace PropertyFinder
             this.Controls.Add(this.label1);
             this.Name = "Reports";
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.Reports_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

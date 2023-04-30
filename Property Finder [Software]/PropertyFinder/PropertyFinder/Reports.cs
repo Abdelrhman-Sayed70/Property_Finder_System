@@ -27,7 +27,10 @@ namespace PropertyFinder
 
         private void button_report_summary_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Report_Summary report_Summary = new Report_Summary();
+            report_Summary.ShowDialog();
+            this.Close();
         }
 
         private void button_report_formula_Click(object sender, EventArgs e)
@@ -49,6 +52,11 @@ namespace PropertyFinder
             HostHomePage hosthomepage = new HostHomePage();
             hosthomepage.ShowDialog();
             this.Close();
+        }
+
+        private void Reports_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
