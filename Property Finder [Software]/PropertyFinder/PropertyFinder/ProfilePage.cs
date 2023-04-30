@@ -15,12 +15,6 @@ namespace PropertyFinder
     public partial class ProfilePage : Form
     {
         int userID;
-        string username;
-        string userPassword;
-        string userEmail;
-        string userPhone;
-        string userBalance;
-        string userType;
 
         string ordb = "Data Source = orcl; User Id = scott; Password = tiger;";
         OracleConnection conn;
@@ -119,20 +113,21 @@ namespace PropertyFinder
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if(userType == "Traveller")
+            if(textBox_userType.Text == "Traveller")
             {
                 this.Hide();
                 TravellerHomePage travellerHomePage = new TravellerHomePage();
                 travellerHomePage.ShowDialog();
                 this.Close();
             }
-            else
+            else 
             {
                 this.Hide();
                 HostHomePage hostHomePage = new HostHomePage();
                 hostHomePage.ShowDialog();
                 this.Close();
             }
+           
         }
     }
 }
