@@ -106,6 +106,12 @@
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Report_Formula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report_Formula.Designer.cs">
+      <DependentUpon>Report_Formula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Report_Grouping.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </Compile>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Formula.resx">
+      <DependentUpon>Report_Formula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Grouping.resx">
       <DependentUpon>Report_Grouping.cs</DependentUpon>

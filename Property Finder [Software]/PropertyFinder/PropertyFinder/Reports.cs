@@ -35,7 +35,10 @@ namespace PropertyFinder
 
         private void button_report_formula_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Report_Formula report_Formula = new Report_Formula();
+            report_Formula.ShowDialog();
+            this.Close();
         }
 
         private void button_report_parametar_Click(object sender, EventArgs e)
