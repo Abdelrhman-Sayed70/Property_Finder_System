@@ -12,7 +12,7 @@ namespace PropertyFinder
 {
     public partial class Report_Summary : Form
     {
-        CrystalReport_Summarizing CR;
+        SummaryReport CR;
         public Report_Summary()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace PropertyFinder
 
         private void Report_Summary_Load(object sender, EventArgs e)
         {
-            CR = new CrystalReport_Summarizing();
+            CR = new SummaryReport();
             crystalReportViewer1.ReportSource = CR;
         }
 

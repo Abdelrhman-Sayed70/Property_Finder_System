@@ -36,7 +36,6 @@ namespace PropertyFinder
             adapter.Fill(ds);
             hostproperties_dataGrid.DataSource = ds.Tables[0];
 
-
         }
 
         private void hostproperties_dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)

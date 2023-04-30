@@ -12,7 +12,7 @@ namespace PropertyFinder
 {
     public partial class Report_Grouping : Form
     {
-        CrystalReport_Grouping CR;
+        GroupingReportrpt CR;
         public Report_Grouping()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace PropertyFinder
 
         private void Report_Grouping_Load(object sender, EventArgs e)
         {
-            CR = new CrystalReport_Grouping();
+            CR = new GroupingReportrpt();
             crystalReportViewer1.ReportSource = CR;
         }
 
