@@ -88,5 +88,18 @@ namespace PropertyFinder
             adapter.Fill(ds);
             hostproperties_dataGrid.DataSource = ds.Tables[0];
         }
+
+        private void logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HostHomePage hosthomepage = new HostHomePage();
+            hosthomepage.ShowDialog();
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

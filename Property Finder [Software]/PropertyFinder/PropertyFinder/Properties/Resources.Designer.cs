@@ -79,5 +79,15 @@ namespace PropertyFinder.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PikPng_com_logout_png_5199120__2_ {
+            get {
+                object obj = ResourceManager.GetObject("PikPng.com_logout-png_5199120 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

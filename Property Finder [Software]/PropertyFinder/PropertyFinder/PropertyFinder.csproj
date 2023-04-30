@@ -231,6 +231,9 @@
   <ItemGroup>
     <None Include="Resources\PikPng.com_logout-png_5199120 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PikPng.com_logout-png_5199120 %282%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>if exist "$(TargetPath).locked" del "$(TargetPath).locked"
