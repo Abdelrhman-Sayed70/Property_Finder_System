@@ -175,3 +175,4 @@ F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\
 F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Grouping.resources
 F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Parametar.resources
 F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.Report_Summary.resources
+F:\Projects Hosted on Git hup\Property_Finder_System\Property Finder [Software]\PropertyFinder\PropertyFinder\obj\Debug\PropertyFinder.csproj.SuggestedBindingRedirects.cache

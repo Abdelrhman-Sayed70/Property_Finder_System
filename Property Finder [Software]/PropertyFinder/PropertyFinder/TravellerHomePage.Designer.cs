@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Properties_datagrid = new System.Windows.Forms.DataGridView();
             this.search_btn = new System.Windows.Forms.Button();
             this.Rent_chkBox = new System.Windows.Forms.CheckBox();
@@ -47,12 +47,12 @@
             this.price_lbl = new System.Windows.Forms.Label();
             this.price_txtBox = new System.Windows.Forms.TextBox();
             this.completeprocess_btn = new System.Windows.Forms.Button();
-            this.balance_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.logout = new System.Windows.Forms.PictureBox();
+            this.balance_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Properties_datagrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
@@ -60,44 +60,44 @@
             // 
             // Properties_datagrid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Properties_datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Properties_datagrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.Properties_datagrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
             this.Properties_datagrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Properties_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Properties_datagrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Properties_datagrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Properties_datagrid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Properties_datagrid.DefaultCellStyle = dataGridViewCellStyle15;
             this.Properties_datagrid.EnableHeadersVisualStyles = false;
             this.Properties_datagrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.Properties_datagrid.Location = new System.Drawing.Point(442, 83);
+            this.Properties_datagrid.Location = new System.Drawing.Point(411, 118);
             this.Properties_datagrid.Margin = new System.Windows.Forms.Padding(4);
             this.Properties_datagrid.Name = "Properties_datagrid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Properties_datagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Properties_datagrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.Properties_datagrid.RowHeadersWidth = 51;
             this.Properties_datagrid.RowTemplate.Height = 24;
-            this.Properties_datagrid.Size = new System.Drawing.Size(652, 373);
+            this.Properties_datagrid.Size = new System.Drawing.Size(575, 197);
             this.Properties_datagrid.TabIndex = 0;
             // 
             // search_btn
@@ -109,7 +109,7 @@
             this.search_btn.ForeColor = System.Drawing.Color.White;
             this.search_btn.Location = new System.Drawing.Point(26, 339);
             this.search_btn.Name = "search_btn";
-            this.search_btn.Size = new System.Drawing.Size(409, 53);
+            this.search_btn.Size = new System.Drawing.Size(250, 53);
             this.search_btn.TabIndex = 1;
             this.search_btn.Text = "Search";
             this.search_btn.UseVisualStyleBackColor = false;
@@ -119,7 +119,7 @@
             // 
             this.Rent_chkBox.AutoSize = true;
             this.Rent_chkBox.ForeColor = System.Drawing.Color.White;
-            this.Rent_chkBox.Location = new System.Drawing.Point(191, 82);
+            this.Rent_chkBox.Location = new System.Drawing.Point(160, 83);
             this.Rent_chkBox.Name = "Rent_chkBox";
             this.Rent_chkBox.Size = new System.Drawing.Size(74, 29);
             this.Rent_chkBox.TabIndex = 2;
@@ -130,7 +130,7 @@
             // 
             this.buy_chkBox.AutoSize = true;
             this.buy_chkBox.ForeColor = System.Drawing.Color.White;
-            this.buy_chkBox.Location = new System.Drawing.Point(271, 82);
+            this.buy_chkBox.Location = new System.Drawing.Point(240, 83);
             this.buy_chkBox.Name = "buy_chkBox";
             this.buy_chkBox.Size = new System.Drawing.Size(68, 29);
             this.buy_chkBox.TabIndex = 2;
@@ -141,7 +141,7 @@
             // 
             this.Villa_btn.AutoSize = true;
             this.Villa_btn.ForeColor = System.Drawing.Color.White;
-            this.Villa_btn.Location = new System.Drawing.Point(191, 251);
+            this.Villa_btn.Location = new System.Drawing.Point(160, 251);
             this.Villa_btn.Name = "Villa_btn";
             this.Villa_btn.Size = new System.Drawing.Size(70, 29);
             this.Villa_btn.TabIndex = 3;
@@ -153,7 +153,7 @@
             // 
             this.Appartement_btn.AutoSize = true;
             this.Appartement_btn.ForeColor = System.Drawing.Color.White;
-            this.Appartement_btn.Location = new System.Drawing.Point(290, 251);
+            this.Appartement_btn.Location = new System.Drawing.Point(259, 251);
             this.Appartement_btn.Name = "Appartement_btn";
             this.Appartement_btn.Size = new System.Drawing.Size(145, 29);
             this.Appartement_btn.TabIndex = 3;
@@ -165,7 +165,7 @@
             // 
             this.land_btn.AutoSize = true;
             this.land_btn.ForeColor = System.Drawing.Color.White;
-            this.land_btn.Location = new System.Drawing.Point(191, 286);
+            this.land_btn.Location = new System.Drawing.Point(160, 286);
             this.land_btn.Name = "land_btn";
             this.land_btn.Size = new System.Drawing.Size(77, 29);
             this.land_btn.TabIndex = 3;
@@ -177,7 +177,7 @@
             // 
             this.House_btn.AutoSize = true;
             this.House_btn.ForeColor = System.Drawing.Color.White;
-            this.House_btn.Location = new System.Drawing.Point(290, 286);
+            this.House_btn.Location = new System.Drawing.Point(259, 286);
             this.House_btn.Name = "House_btn";
             this.House_btn.Size = new System.Drawing.Size(90, 29);
             this.House_btn.TabIndex = 3;
@@ -190,7 +190,7 @@
             this.rooms_cmboBox.FormattingEnabled = true;
             this.rooms_cmboBox.Items.AddRange(new object[] {
             "All"});
-            this.rooms_cmboBox.Location = new System.Drawing.Point(191, 118);
+            this.rooms_cmboBox.Location = new System.Drawing.Point(160, 118);
             this.rooms_cmboBox.Name = "rooms_cmboBox";
             this.rooms_cmboBox.Size = new System.Drawing.Size(148, 33);
             this.rooms_cmboBox.TabIndex = 4;
@@ -210,7 +210,7 @@
             this.location_comboBox.FormattingEnabled = true;
             this.location_comboBox.Items.AddRange(new object[] {
             "All"});
-            this.location_comboBox.Location = new System.Drawing.Point(191, 161);
+            this.location_comboBox.Location = new System.Drawing.Point(160, 161);
             this.location_comboBox.Name = "location_comboBox";
             this.location_comboBox.Size = new System.Drawing.Size(148, 33);
             this.location_comboBox.TabIndex = 4;
@@ -237,7 +237,7 @@
             // 
             // price_txtBox
             // 
-            this.price_txtBox.Location = new System.Drawing.Point(191, 205);
+            this.price_txtBox.Location = new System.Drawing.Point(160, 205);
             this.price_txtBox.Name = "price_txtBox";
             this.price_txtBox.Size = new System.Drawing.Size(148, 30);
             this.price_txtBox.TabIndex = 6;
@@ -250,36 +250,22 @@
             this.completeprocess_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.completeprocess_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.completeprocess_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.completeprocess_btn.Location = new System.Drawing.Point(26, 404);
+            this.completeprocess_btn.Location = new System.Drawing.Point(542, 340);
             this.completeprocess_btn.Name = "completeprocess_btn";
-            this.completeprocess_btn.Size = new System.Drawing.Size(409, 52);
+            this.completeprocess_btn.Size = new System.Drawing.Size(250, 52);
             this.completeprocess_btn.TabIndex = 1;
             this.completeprocess_btn.Text = "Complete Process";
             this.completeprocess_btn.UseVisualStyleBackColor = false;
             this.completeprocess_btn.Click += new System.EventHandler(this.completeprocess_btn_Click);
             // 
-            // balance_btn
-            // 
-            this.balance_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.balance_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.balance_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.balance_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.balance_btn.Location = new System.Drawing.Point(904, 31);
-            this.balance_btn.Name = "balance_btn";
-            this.balance_btn.Size = new System.Drawing.Size(133, 39);
-            this.balance_btn.TabIndex = 21;
-            this.balance_btn.Text = "My Balance";
-            this.balance_btn.UseVisualStyleBackColor = true;
-            this.balance_btn.Click += new System.EventHandler(this.balance_btn_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
             this.label1.Location = new System.Drawing.Point(16, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 56);
+            this.label1.Size = new System.Drawing.Size(445, 48);
             this.label1.TabIndex = 22;
             this.label1.Text = "Find Your Property!";
             // 
@@ -307,9 +293,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PropertyFinder.Properties.Resources.PngItem_40070__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1055, 31);
+            this.pictureBox1.Location = new System.Drawing.Point(905, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(81, 77);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
@@ -319,20 +305,34 @@
             // 
             this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout.Image = global::PropertyFinder.Properties.Resources.PikPng_com_logout_png_5199120__1_;
-            this.logout.Location = new System.Drawing.Point(26, 490);
+            this.logout.Location = new System.Drawing.Point(878, 402);
             this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(123, 33);
+            this.logout.Size = new System.Drawing.Size(105, 32);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.logout.TabIndex = 23;
             this.logout.TabStop = false;
             this.logout.Click += new System.EventHandler(this.logout_Click);
+            // 
+            // balance_btn
+            // 
+            this.balance_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.balance_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.balance_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.balance_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
+            this.balance_btn.Location = new System.Drawing.Point(774, 27);
+            this.balance_btn.Name = "balance_btn";
+            this.balance_btn.Size = new System.Drawing.Size(125, 39);
+            this.balance_btn.TabIndex = 21;
+            this.balance_btn.Text = "My Balance";
+            this.balance_btn.UseVisualStyleBackColor = true;
+            this.balance_btn.Click += new System.EventHandler(this.balance_btn_Click);
             // 
             // TravellerHomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1121, 542);
+            this.ClientSize = new System.Drawing.Size(994, 443);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.label2);
@@ -385,11 +385,11 @@
         private System.Windows.Forms.Label price_lbl;
         private System.Windows.Forms.TextBox price_txtBox;
         private System.Windows.Forms.Button completeprocess_btn;
-        private System.Windows.Forms.Button balance_btn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox logout;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button balance_btn;
     }
 }

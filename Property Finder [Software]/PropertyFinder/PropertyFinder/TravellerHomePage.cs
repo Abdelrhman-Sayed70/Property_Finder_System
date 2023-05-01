@@ -101,6 +101,7 @@ namespace PropertyFinder
                 MessageBox.Show("No Selected Property!");
                 return;
             }
+
             // Get the first selected row (there can be only one)
             DataGridViewRow selectedRow = Properties_datagrid.SelectedRows[0];
 

@@ -60,9 +60,9 @@
             this.addproperty_btn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addproperty_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addproperty_btn.ForeColor = System.Drawing.Color.White;
-            this.addproperty_btn.Location = new System.Drawing.Point(36, 384);
+            this.addproperty_btn.Location = new System.Drawing.Point(36, 550);
             this.addproperty_btn.Name = "addproperty_btn";
-            this.addproperty_btn.Size = new System.Drawing.Size(395, 51);
+            this.addproperty_btn.Size = new System.Drawing.Size(276, 51);
             this.addproperty_btn.TabIndex = 19;
             this.addproperty_btn.Text = "Add Property";
             this.addproperty_btn.UseVisualStyleBackColor = false;
@@ -74,7 +74,7 @@
             this.myproperties_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.myproperties_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.myproperties_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.myproperties_btn.Location = new System.Drawing.Point(619, 236);
+            this.myproperties_btn.Location = new System.Drawing.Point(448, 458);
             this.myproperties_btn.Name = "myproperties_btn";
             this.myproperties_btn.Size = new System.Drawing.Size(462, 76);
             this.myproperties_btn.TabIndex = 19;
@@ -86,11 +86,11 @@
             // 
             this.balance_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.balance_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.balance_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balance_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.balance_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.balance_btn.Location = new System.Drawing.Point(619, 107);
+            this.balance_btn.Location = new System.Drawing.Point(670, 36);
             this.balance_btn.Name = "balance_btn";
-            this.balance_btn.Size = new System.Drawing.Size(462, 79);
+            this.balance_btn.Size = new System.Drawing.Size(126, 49);
             this.balance_btn.TabIndex = 20;
             this.balance_btn.Text = "My Balance";
             this.balance_btn.UseVisualStyleBackColor = true;
@@ -100,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(31, 107);
+            this.label2.Location = new System.Drawing.Point(31, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(133, 25);
             this.label2.TabIndex = 36;
@@ -108,9 +108,9 @@
             // 
             // price_txtBox
             // 
-            this.price_txtBox.Location = new System.Drawing.Point(197, 247);
+            this.price_txtBox.Location = new System.Drawing.Point(36, 374);
             this.price_txtBox.Name = "price_txtBox";
-            this.price_txtBox.Size = new System.Drawing.Size(148, 30);
+            this.price_txtBox.Size = new System.Drawing.Size(63, 30);
             this.price_txtBox.TabIndex = 35;
             this.price_txtBox.TextChanged += new System.EventHandler(this.price_txtBox_TextChanged);
             // 
@@ -118,7 +118,7 @@
             // 
             this.price_lbl.AutoSize = true;
             this.price_lbl.ForeColor = System.Drawing.Color.White;
-            this.price_lbl.Location = new System.Drawing.Point(31, 250);
+            this.price_lbl.Location = new System.Drawing.Point(31, 346);
             this.price_lbl.Name = "price_lbl";
             this.price_lbl.Size = new System.Drawing.Size(56, 25);
             this.price_lbl.TabIndex = 31;
@@ -128,7 +128,7 @@
             // 
             this.locations_lbl.AutoSize = true;
             this.locations_lbl.ForeColor = System.Drawing.Color.White;
-            this.locations_lbl.Location = new System.Drawing.Point(31, 198);
+            this.locations_lbl.Location = new System.Drawing.Point(33, 266);
             this.locations_lbl.Name = "locations_lbl";
             this.locations_lbl.Size = new System.Drawing.Size(96, 25);
             this.locations_lbl.TabIndex = 32;
@@ -138,7 +138,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(31, 296);
+            this.label3.Location = new System.Drawing.Point(31, 432);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 25);
             this.label3.TabIndex = 33;
@@ -149,7 +149,7 @@
             // 
             this.rooms_lbl.AutoSize = true;
             this.rooms_lbl.ForeColor = System.Drawing.Color.White;
-            this.rooms_lbl.Location = new System.Drawing.Point(31, 152);
+            this.rooms_lbl.Location = new System.Drawing.Point(33, 192);
             this.rooms_lbl.Name = "rooms_lbl";
             this.rooms_lbl.Size = new System.Drawing.Size(73, 25);
             this.rooms_lbl.TabIndex = 34;
@@ -158,9 +158,9 @@
             // location_comboBox
             // 
             this.location_comboBox.FormattingEnabled = true;
-            this.location_comboBox.Location = new System.Drawing.Point(197, 195);
+            this.location_comboBox.Location = new System.Drawing.Point(36, 298);
             this.location_comboBox.Name = "location_comboBox";
-            this.location_comboBox.Size = new System.Drawing.Size(148, 33);
+            this.location_comboBox.Size = new System.Drawing.Size(127, 33);
             this.location_comboBox.TabIndex = 29;
             this.location_comboBox.SelectedIndexChanged += new System.EventHandler(this.location_comboBox_SelectedIndexChanged);
             // 
@@ -168,7 +168,7 @@
             // 
             this.House_btn.AutoSize = true;
             this.House_btn.ForeColor = System.Drawing.Color.White;
-            this.House_btn.Location = new System.Drawing.Point(286, 331);
+            this.House_btn.Location = new System.Drawing.Point(125, 505);
             this.House_btn.Name = "House_btn";
             this.House_btn.Size = new System.Drawing.Size(90, 29);
             this.House_btn.TabIndex = 25;
@@ -181,7 +181,7 @@
             // 
             this.land_btn.AutoSize = true;
             this.land_btn.ForeColor = System.Drawing.Color.White;
-            this.land_btn.Location = new System.Drawing.Point(197, 331);
+            this.land_btn.Location = new System.Drawing.Point(36, 505);
             this.land_btn.Name = "land_btn";
             this.land_btn.Size = new System.Drawing.Size(77, 29);
             this.land_btn.TabIndex = 26;
@@ -194,7 +194,7 @@
             // 
             this.Appartement_btn.AutoSize = true;
             this.Appartement_btn.ForeColor = System.Drawing.Color.White;
-            this.Appartement_btn.Location = new System.Drawing.Point(286, 294);
+            this.Appartement_btn.Location = new System.Drawing.Point(125, 468);
             this.Appartement_btn.Name = "Appartement_btn";
             this.Appartement_btn.Size = new System.Drawing.Size(145, 29);
             this.Appartement_btn.TabIndex = 27;
@@ -207,7 +207,7 @@
             // 
             this.Villa_btn.AutoSize = true;
             this.Villa_btn.ForeColor = System.Drawing.Color.White;
-            this.Villa_btn.Location = new System.Drawing.Point(197, 294);
+            this.Villa_btn.Location = new System.Drawing.Point(36, 468);
             this.Villa_btn.Name = "Villa_btn";
             this.Villa_btn.Size = new System.Drawing.Size(70, 29);
             this.Villa_btn.TabIndex = 28;
@@ -220,7 +220,7 @@
             // 
             this.buy_chkBox.AutoSize = true;
             this.buy_chkBox.ForeColor = System.Drawing.Color.White;
-            this.buy_chkBox.Location = new System.Drawing.Point(277, 107);
+            this.buy_chkBox.Location = new System.Drawing.Point(116, 142);
             this.buy_chkBox.Name = "buy_chkBox";
             this.buy_chkBox.Size = new System.Drawing.Size(68, 29);
             this.buy_chkBox.TabIndex = 23;
@@ -232,7 +232,7 @@
             // 
             this.Rent_chkBox.AutoSize = true;
             this.Rent_chkBox.ForeColor = System.Drawing.Color.White;
-            this.Rent_chkBox.Location = new System.Drawing.Point(197, 107);
+            this.Rent_chkBox.Location = new System.Drawing.Point(36, 142);
             this.Rent_chkBox.Name = "Rent_chkBox";
             this.Rent_chkBox.Size = new System.Drawing.Size(74, 29);
             this.Rent_chkBox.TabIndex = 24;
@@ -253,9 +253,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 149);
+            this.textBox1.Location = new System.Drawing.Point(36, 220);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 30);
+            this.textBox1.Size = new System.Drawing.Size(63, 30);
             this.textBox1.TabIndex = 37;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -265,7 +265,7 @@
             this.button_reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_reports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(56)))), ((int)(((byte)(84)))));
-            this.button_reports.Location = new System.Drawing.Point(619, 359);
+            this.button_reports.Location = new System.Drawing.Point(448, 550);
             this.button_reports.Name = "button_reports";
             this.button_reports.Size = new System.Drawing.Size(462, 76);
             this.button_reports.TabIndex = 38;
@@ -277,7 +277,7 @@
             // 
             this.logout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.logout.Image = global::PropertyFinder.Properties.Resources.PikPng_com_logout_png_5199120__1_;
-            this.logout.Location = new System.Drawing.Point(36, 484);
+            this.logout.Location = new System.Drawing.Point(12, 631);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(123, 33);
             this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,9 +289,9 @@
             // 
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::PropertyFinder.Properties.Resources.PngItem_40070__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(1042, 46);
+            this.pictureBox1.Location = new System.Drawing.Point(812, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.Size = new System.Drawing.Size(98, 93);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 40;
             this.pictureBox1.TabStop = false;
@@ -302,7 +302,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1117, 538);
+            this.ClientSize = new System.Drawing.Size(927, 676);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.button_reports);

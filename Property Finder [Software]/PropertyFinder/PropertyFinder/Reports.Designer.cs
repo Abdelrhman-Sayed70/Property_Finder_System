@@ -122,7 +122,7 @@ namespace PropertyFinder
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(37)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(1121, 542);
+            this.ClientSize = new System.Drawing.Size(932, 542);
             this.Controls.Add(this.logout);
             this.Controls.Add(this.button_report_parametar);
             this.Controls.Add(this.button_report_formula);
