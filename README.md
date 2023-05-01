@@ -35,6 +35,6 @@ Host Dashboard Page
 
 Host Reports Page
 :-------------------------:
-![image](https://user-images.githubusercontent.com/99830416/235388186-38d0747b-bbda-4eb8-bde1-6a13c336e474.png)
+![image](https://user-images.githubusercontent.com/99830416/235388343-8312d5eb-ed21-44ac-8f6d-b365caf28951.png)
 
 
