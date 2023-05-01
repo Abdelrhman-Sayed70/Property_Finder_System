@@ -6,8 +6,8 @@
 - **Programming Language: C#**
 - **Framework: .NET Framework**
 - **Database: Oracle Database**
-- **Apply Clean Code** 
-- **Apply SOLID Design Patterns Technique**
+- **Clean Code Is Applied** 
+- **SOLID Design Patterns Technique Is Applied**
 # Screenshots
 
 Login                
