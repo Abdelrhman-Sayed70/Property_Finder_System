@@ -6,8 +6,10 @@
 - **Programming Language: C#**
 - **Framework: .NET Framework**
 - **Database: Oracle Database**
-- **Clean Code Is Applied** 
-- **SOLID Design Patterns Technique Is Applied**
+- **SOLID Design Patterns Techniques are Applied**
+- **OOP Principles is Applied**
+- **Clean Code is Applied** 
+
 # Screenshots
 
 Login                
@@ -39,3 +41,10 @@ Host Reports Page
 ![image](https://user-images.githubusercontent.com/99830416/235388343-8312d5eb-ed21-44ac-8f6d-b365caf28951.png)
 
 
+# Developers of This Art
+- [**Abdelrhman Sayed**](https://github.com/Abdelrhman-Sayed70)
+- [**Nour Ayman**](https://github.com/NourAyman10)
+- [**Ruqaiyah Mohammed**](https://github.com/25Ruq)
+- [**Heba Tarek**](https://github.com/hebatarekkamal) 
+- [**Haneen Ibrahim**](https://github.com/HaneenIbrahim2)
+- [**Mariam Ahmed**](https://github.com/MariamAhmeddd)
