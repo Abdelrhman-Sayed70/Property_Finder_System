@@ -7,7 +7,7 @@
 - **Framework: .NET Framework**
 - **Database: Oracle Database**
 - **SOLID Design Patterns Techniques are Applied**
-- **OOP Principles is Applied**
+- **OOP Principles are Applied**
 - **Clean Code is Applied** 
 
 # Screenshots
