@@ -104,7 +104,7 @@ CREATE PROCEDURE GetUserById
     (userEmail OUT NUMBER, userID OUT VARCHAR2, userName OUT VARCHAR2 , userPassword OUT VARCHAR2) 
 AS
 BEGIN
-    SELECT USER_ID, USER_NAME , USER_PASSWORD into userID, userName ,userPassword FROM users WHERE USER_EMAIL =    userEmail;
+    SELECT USER_ID, USER_NAME , USER_PASSWORD into userID, userName ,userPassword FROM users WHERE USER_EMAIL = userEmail;
 END;
 ```
 
